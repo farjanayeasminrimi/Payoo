@@ -7,10 +7,10 @@ loginBtn.addEventListener("click", function () {
   if (number === "01333348792" && pin === "4444") {
     alert("Login Successfully");
     window.location.assign("./home.html");
-    numberInput.value = "";
-    pinInput.value = "";
   } else {
     alert("Invalid number or pin");
     return;
   }
+  numberInput.value = "";
+  pinInput.value = "";
 });
