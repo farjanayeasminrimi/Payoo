@@ -24,3 +24,11 @@ function removeValue(idName) {
   let input = getElement(idName);
   input.value = "";
 }
+
+function showOnly(id) {
+  const addMoney = getElement("add-money");
+  const cashOut = getElement("cash-out");
+  addMoney.classList.add("hidden");
+  cashOut.classList.add("hidden");
+  getElement(id).classList.remove("hidden");
+}

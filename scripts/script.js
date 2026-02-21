@@ -6,7 +6,7 @@ loginBtn.addEventListener("click", function () {
   let pin = pinInput.value;
   if (number === "01333348792" && pin === "4444") {
     alert("Login Successfully");
-    window.location.assign("/home.html");
+    window.location.assign("./home.html");
     numberInput.value = "";
     pinInput.value = "";
   } else {

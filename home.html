@@ -55,12 +55,14 @@
       </section>
       <section class="btns bg-white py-6 px-2 w-11/12 mx-auto grid grid-cols-3 gap-4 mb-8">
         <button
+          onclick="showOnly('add-money')"
           class="btn rounded-lg flex-col h-full py-4 space-y-1 hover:bg-primary-content hover:border-info"
         >
           <img src="./assets/opt-1.png" alt="" />
           <span class="text-neutral/50 text-[.6rem]">Add Money</span>
         </button>
         <button
+          onclick="showOnly('cash-out')"
           class="btn rounded-lg flex-col h-full py-4 space-y-1 hover:bg-primary-content hover:border-info"
         >
           <img src="./assets/opt-2.png" alt="" />
@@ -92,7 +94,7 @@
         </button>
       </section>
       <!-- Add Money form -->
-      <section id="add-money" class="w-11/12 mx-auto">
+      <section id="add-money" class="w-11/12 mx-auto hidden">
         <h1 class="text-2xl text-neutral font-semibold">Add Money</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
@@ -145,7 +147,7 @@
       </section>
 
       <!-- Cash out form -->
-      <section id="cash-out" class="w-11/12 mx-auto">
+      <section id="cash-out" class="w-11/12 mx-auto hidden">
         <h1 class="text-2xl text-neutral font-semibold">Cash Out</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
