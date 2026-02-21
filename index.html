@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Tailwind css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -33,6 +32,7 @@
           <fieldset class="fieldset space-y-2">
             <label class="label text-neutral-800 font-bold">Mobile Number</label>
             <input
+              id="number"
               type="text"
               class="input bg-base-200 rounded-full outline-none"
               placeholder="Enter your number"
@@ -41,13 +41,16 @@
             />
             <label class="label text-neutral-800 font-bold">4 Digit Pin</label>
             <input
-              type="text"
+              id="pin"
+              type="password"
               class="input bg-base-200 rounded-full outline-none"
               placeholder="Enter 4 Digit Pin"
               maxlength="4"
               minlength="4"
             />
-            <button class="btn bg-primary mt-4 rounded-full text-base-100">Login</button>
+            <button id="login-btn" class="btn bg-primary mt-4 rounded-full text-base-100">
+              Login
+            </button>
           </fieldset>
         </div>
       </div>
