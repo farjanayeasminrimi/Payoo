@@ -76,12 +76,14 @@
           <span class="text-neutral/50 text-[.6rem]">Transfer Money</span>
         </button>
         <button
+          onclick="showOnly('bonus')"
           class="btn rounded-lg flex-col h-full py-4 space-y-1 hover:bg-primary-content hover:border-info"
         >
           <img src="./assets/opt-4.png" alt="" />
           <span class="text-neutral/50 text-[.6rem]">Get Bonus</span>
         </button>
         <button
+          onclick="showOnly('pay-bill')"
           class="btn rounded-lg flex-col h-full py-4 space-y-1 hover:bg-primary-content hover:border-info"
         >
           <img src="./assets/opt-5.png" alt="" />
@@ -230,7 +232,7 @@
       </section>
 
       <!-- Get bonus -->
-      <section id="money-transfer" class="w-11/12 mx-auto">
+      <section id="bonus" class="w-11/12 mx-auto hidden">
         <h1 class="text-2xl text-neutral font-semibold">Get Bonus</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
@@ -252,10 +254,65 @@
           </div>
         </div>
       </section>
+
+      <!-- Pay bill -->
+      <section id="pay-bill" class="w-11/12 mx-auto hidden">
+        <h1 class="text-2xl text-neutral font-semibold">Pay Bill</h1>
+        <div class="form mt-8">
+          <div class="card bg-base-100 w-full bg-base-100">
+            <div class="card-body">
+              <fieldset class="fieldset space-y-2">
+                <label class="label text-neutral-800 font-bold">Select To Pay</label>
+
+                <select
+                  id="pay-bank"
+                  class="select bg-base-200 rounded-full outline-none w-full text-neutral/60"
+                >
+                  <option value="" disabled selected>Select Bank</option>
+                  <option value="brac">Brac Bank</option>
+                  <option value="city">City Bank</option>
+                  <option value="sjibl">SJIBL Bank</option>
+                </select>
+
+                <label class="label text-neutral-800 font-bold">Biller Account Number</label>
+                <input
+                  id="biller-number"
+                  type="text"
+                  class="input bg-base-200 rounded-full outline-none w-full"
+                  placeholder="Enter account number"
+                  maxlength="11"
+                  minlength="11"
+                />
+                <label class="label text-neutral-800 font-bold">Amount to Pay</label>
+                <input
+                  id="pay-bill-amount"
+                  type="number"
+                  class="input bg-base-200 rounded-full outline-none w-full"
+                  placeholder="Add Amount to pay"
+                />
+                <label class="label text-neutral-800 font-bold">Pin Number</label>
+                <input
+                  id="pay-bill-pin"
+                  type="password"
+                  class="input bg-base-200 rounded-full outline-none w-full"
+                  placeholder="Enter 4 digit pin number"
+                  maxlength="4"
+                  minlength="4"
+                />
+                <button id="pay-bill-btn" class="btn bg-primary mt-4 rounded-full text-base-100">
+                  Pay Now
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./scripts/machine.js"></script>
     <script src="./scripts/addMoney.js"></script>
     <script src="./scripts/cashOut.js"></script>
     <script src="./scripts/transfer.js"></script>
+    <script src="./scripts/coupon.js"></script>
+    <script src="./scripts/payBill.js"></script>
   </body>
 </html>
