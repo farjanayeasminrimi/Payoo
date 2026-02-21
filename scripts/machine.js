@@ -28,7 +28,9 @@ function removeValue(idName) {
 function showOnly(id) {
   const addMoney = getElement("add-money");
   const cashOut = getElement("cash-out");
+  const moneyTransfer = getElement("money-transfer");
   addMoney.classList.add("hidden");
   cashOut.classList.add("hidden");
+  moneyTransfer.classList.add("hidden");
   getElement(id).classList.remove("hidden");
 }
