@@ -20,11 +20,13 @@ addMoneyBtn.addEventListener("click", function () {
 
   // pin validation
   const pin = getValueFromInput("add-money-pin");
+  const title = getElement("add-money-title").innerText;
   if (pin === "4444") {
     alert(`Added balance successfully to 
       ${bank}
       at ${new Date()}`);
     updateBalance(newBalance);
+    addCard(title, "+", addAmount);
   } else {
     alert("Invalid Pin");
     return;

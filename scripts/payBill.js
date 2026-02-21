@@ -28,8 +28,11 @@ payBillBtn.addEventListener("click", function () {
   }
   // validate pin
   const pin = getValueFromInput("pay-bill-pin");
+  const title = getElement("pay-bill-title").innerText;
   if (pin === "4444") {
+    alert("Paid bill successfully");
     updateBalance(newBalance);
+    addCard(title, "-", payBillAmount);
   } else {
     alert("Invalid Pin");
     return;

@@ -38,3 +38,35 @@ function showOnly(id) {
   payBill.classList.add("hidden");
   getElement(id).classList.remove("hidden");
 }
+
+function addCard(type, symbol, price) {
+  const historyContainer = getElement("transaction-card-container");
+  const card = document.createElement("div");
+  card.className = "transaction-card flex justify-between items-center";
+  card.innerHTML = `
+            <div class="flex gap-6 items-center">
+              <img src="./assets/opt-1.png" alt="" />
+              <div class="flex flex-col">
+                <h3 class="text-[.9rem] font-bold text-gray-700">${type}</h3>
+                <span class="text-[.7rem] font-semibold text-gray-500">${new Date().toLocaleString(
+                  "en-US",
+                  {
+                    timeZone: "Asia/Dhaka",
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                  },
+                )}</span>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <h3 class="text-[1rem] font-semibold text-gray-500">
+                <span id="symbol">${symbol}</span>
+                $${price}
+              </h3>
+              <div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+  `;
+  historyContainer.appendChild(card);
+}

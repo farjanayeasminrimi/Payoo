@@ -98,7 +98,7 @@
       </section>
       <!-- Add Money form -->
       <section id="add-money" class="w-11/12 mx-auto hidden">
-        <h1 class="text-2xl text-neutral font-semibold">Add Money</h1>
+        <h1 id="add-money-title" class="text-2xl text-neutral font-semibold">Add Money</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
             <div class="card-body">
@@ -151,7 +151,7 @@
 
       <!-- Cash out form -->
       <section id="cash-out" class="w-11/12 mx-auto hidden">
-        <h1 class="text-2xl text-neutral font-semibold">Cash Out</h1>
+        <h1 id="cash-out-title" class="text-2xl text-neutral font-semibold">Cash Out</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
             <div class="card-body">
@@ -233,7 +233,7 @@
 
       <!-- Get bonus -->
       <section id="bonus" class="w-11/12 mx-auto hidden">
-        <h1 class="text-2xl text-neutral font-semibold">Get Bonus</h1>
+        <h1 id="bonus-title" class="text-2xl text-neutral font-semibold">Get Bonus</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
             <div class="card-body">
@@ -257,7 +257,7 @@
 
       <!-- Pay bill -->
       <section id="pay-bill" class="w-11/12 mx-auto hidden">
-        <h1 class="text-2xl text-neutral font-semibold">Pay Bill</h1>
+        <h1 id="pay-bill-title" class="text-2xl text-neutral font-semibold">Pay Bill</h1>
         <div class="form mt-8">
           <div class="card bg-base-100 w-full bg-base-100">
             <div class="card-body">
@@ -306,6 +306,15 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- Transaction -->
+      <section id="Transaction" class="w-11/12 mx-auto">
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-2xl text-neutral font-semibold">Transaction History</h1>
+          <a class="text-[1rem] text-neutral/50 font-semibold" href="">View All</a>
+        </div>
+        <div id="transaction-card-container"></div>
       </section>
     </main>
     <script src="./scripts/machine.js"></script>

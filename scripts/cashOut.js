@@ -52,8 +52,11 @@ cashOutBtn.addEventListener("click", function () {
   }
   // validate pin
   const pin = getValueFromInput("cashout-pin");
+  const title = getElement("cash-out-title").innerText;
   if (pin === "4444") {
+    alert("Cash Out successfully");
     updateBalance(newBalance);
+    addCard(title, "-", cashOutAmount);
   } else {
     alert("Invalid Pin");
     return;
