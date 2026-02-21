@@ -31,11 +31,13 @@ function showOnly(id) {
   const moneyTransfer = getElement("money-transfer");
   const bonus = getElement("bonus");
   const payBill = getElement("pay-bill");
+  const transaction = getElement("Transaction");
   addMoney.classList.add("hidden");
   cashOut.classList.add("hidden");
   moneyTransfer.classList.add("hidden");
   bonus.classList.add("hidden");
   payBill.classList.add("hidden");
+  transaction.classList.add("hidden");
   getElement(id).classList.remove("hidden");
 }
 
